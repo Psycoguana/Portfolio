@@ -1,0 +1,23 @@
+.contactContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-width: 90%;
+	// margin-bottom: 10%;
+	// margin-top: 20%;
+
+	@media screen and (max-width: 768px) {
+		margin-top: 80%;
+		margin-bottom: 30%;
+	}
+
+	form {
+		@media screen and (max-width: 768px) {
+			width: 85%;
+		}
+
+		margin-top: 5%;
+		width: 35%;
+	}
+}

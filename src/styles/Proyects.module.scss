@@ -1,0 +1,54 @@
+.projects {
+	margin-top: 10%;
+}
+
+.projectsContainer {
+	@media screen and (max-width: 768px) {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	@media screen and (min-width: 768px) {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.card {
+		align-self: center;
+		justify-self: center;
+
+		margin-bottom: 10%;
+		height: 30%;
+		width: 30%;
+		margin: 1.5%;
+		margin-top: 5%;
+		padding: 0;
+
+		.cardHeaderTitle {
+			justify-content: center;
+		}
+
+		@media screen and (max-width: 768px) {
+			margin-bottom: 10%;
+			margin-top: 10%;
+			width: 80vw;
+			height: 80%;
+		}
+
+		img {
+			width: 600px;
+			height: 200px;
+		}
+
+		.footer {
+			justify-content: space-around;
+			padding: 3%;
+
+			strong {
+				font-size: 1rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,107 @@
+#root {
+	width: 100vw;
+	height: 100vh;
+	margin: 0 auto;
+	text-align: center;
+}
+
+header {
+	background: red;
+	opacity: 50%;
+}
+
+.App {
+	// padding: 2rem;
+}
+
+section {
+	min-height: 100vh;
+
+	&.hidden {
+		opacity: 0;
+		filter: blur(5px);
+		transform: translateX(-100%);
+		transition: all 850ms;
+
+		@media (prefers-reduced-motion) {
+			transition: none;
+		}
+	}
+
+	&.show {
+		opacity: 1;
+		filter: blur(0);
+		transform: translateX(0);
+	}
+
+	.card:nth-child(2) {
+		transition-delay: 200ms;
+	}
+
+	.card:nth-child(3) {
+		transition-delay: 400ms;
+	}
+}
+
+.arrowTopIcon {
+	position: fixed;
+	font-size: 4rem;
+
+	bottom: 0;
+	right: 0;
+	margin-bottom: 3%;
+	margin-right: 3%;
+	box-shadow: 4px 6px 15px 1px rgba(0, 0, 0, 1.24);
+	border-radius: 100%;
+	background-color: black;
+	border-color: blue !important;
+
+	@media screen and (max-width: 768px) {
+		font-size: 3rem;
+		margin-bottom: 6%;
+		margin-right: 6%;
+	}
+
+	&:active {
+		transform: scale(0.8);
+		box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+	}
+}
+
+.arrowHidden {
+	transition: opacity 200ms, display 200ms;
+	display: none;
+	opacity: 0;
+}
+
+.arrowVisible {
+	transition: opacity 200ms, display 200ms;
+	display: '';
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+@keyframes logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	a:nth-of-type(2) .logo {
+		animation: logo-spin infinite 20s linear;
+	}
+}
+
+.card {
+	padding: 2em;
+}
+
+.read-the-docs {
+	color: #888;
+}
