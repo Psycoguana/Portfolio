@@ -1,16 +1,11 @@
 import { Box, Block, Heading, Icon, Image, Section } from 'react-bulma-components';
 import styles from '../styles/Presentation.module.scss';
-import profilePic from '../assets/profile_pic.png';
+import profilePic from '../assets/profile_pic.webp';
 
 export default function Presentation() {
 	return (
 		<Section className={styles.container}>
 			<Block className={styles.profilePic}>
-				{/* <Image
-					src="https://marketplace.canva.com/EAFEits4-uw/1/0/1600w/canva-boy-cartoon-gamer-animated-twitch-profile-photo-oEqs2yqaL8s.jpg"
-					alt="Profile picture"
-					rounded
-				/> */}
 				<Image src={profilePic} alt="Profile picture" rounded />
 				<Heading>Hola, soy Nico 👋</Heading>
 				<div className={styles.iconContainer}>
